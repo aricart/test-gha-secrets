@@ -1,0 +1,39 @@
+{
+  "name": "test-gha-secrets",
+  "version": "1.0.0",
+  "description": "test github actions secret",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc ava --verbose -T 60000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//aricart/test-gha-secrets"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "extension": [
+      ".js"
+    ],
+    "include": [
+      "src/**/*.ts",
+      "build/**/*.js",
+      "nats-base-client/**/*.ts"
+    ],
+    "exclude": [],
+    "sourceMap": true,
+    "all": true
+  },
+  "ava": {
+    "failFast": true,
+    "files": [
+      "./test/**/*.js"
+    ]
+  }
+}
